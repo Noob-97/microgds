@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://xx33h8m0q7pj"]
+
+[ext_resource type="FontFile" uid="uid://bdp6nx07qbvxl" path="res://Fonts/ARIAL.TTF" id="1_chegx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k12tt"]
+font = ExtResource("1_chegx")
+font_size = 17
+
+[node name="LOGITEM" type="Panel" unique_id=1083570883]
+custom_minimum_size = Vector2(0, 16.6)
+custom_maximum_size = Vector2(-1, 43.275)
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g4v7s")
+
+[node name="Label4" type="Label" parent="." unique_id=2088128191]
+modulate = Color(0.5636259, 0.5636254, 0.5636254, 1)
+layout_mode = 0
+offset_top = 1.0
+offset_right = 284.0
+offset_bottom = 21.0
+text = "10$: TIME IS MONEY"
+label_settings = SubResource("LabelSettings_k12tt")
+horizontal_alignment = 2

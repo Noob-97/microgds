@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://b612atoiloh30"]
+
+[ext_resource type="Script" uid="uid://201x3g0clbqp" path="res://Scripts/AdjustSizeContainer.gd" id="1_dnkca"]
+[ext_resource type="FontFile" uid="uid://cqh44jdny7mme" path="res://Fonts/JetBrainsMono-Regular.ttf" id="2_c8146"]
+[ext_resource type="Script" uid="uid://llawyrysf4fe" path="res://Scripts/TypeWriteLine.gd" id="2_psul3"]
+[ext_resource type="Script" uid="uid://vimsdqgn74qn" path="res://Scripts/mousecontrol.gd" id="4_c8146"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_57qmd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yf5fn"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_21xkr"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+thickness = 2
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6bp64"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+thickness = 2
+
+[node name="LINE" type="Control" unique_id=609317115]
+custom_minimum_size = Vector2(-1, 120)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dnkca")
+
+[node name="Index" type="Label" parent="." unique_id=1874613009]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 15.0
+offset_right = 40.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.6392157, 0.6392157, 0.6392157, 1)
+theme_override_fonts/font = ExtResource("2_c8146")
+theme_override_font_sizes/font_size = 20
+text = "#"
+horizontal_alignment = 2
+
+[node name="Content" type="VBoxContainer" parent="." unique_id=1416482139]
+custom_minimum_size = Vector2(-1, -1)
+layout_mode = 0
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 479.0
+offset_bottom = 95.0
+script = ExtResource("2_psul3")
+
+[node name="LineToWrite" type="RichTextLabel" parent="Content" unique_id=559427765]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_c8146")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "This is a sample line of code to copy.
+"
+fit_content = true
+
+[node name="TextEdit" type="TextEdit" parent="Content" unique_id=895068035]
+layout_mode = 2
+theme_override_colors/caret_color = Color(0.23921569, 0.7921569, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_c8146")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxEmpty_57qmd")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yf5fn")
+context_menu_enabled = false
+emoji_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+middle_mouse_paste_enabled = false
+wrap_mode = 1
+virtual_keyboard_enabled = false
+scroll_fit_content_height = true
+script = ExtResource("4_c8146")
+
+[node name="HSeparator" type="HSeparator" parent="Content" unique_id=442172290]
+layout_mode = 2
+theme_override_constants/separation = 0
+theme_override_styles/separator = SubResource("StyleBoxLine_21xkr")
+
+[node name="HSeparator2" type="HSeparator" parent="Content" unique_id=259988252]
+layout_mode = 2
+theme_override_constants/separation = 7
+theme_override_styles/separator = SubResource("StyleBoxLine_6bp64")
+
+[connection signal="focus_entered" from="Content/TextEdit" to="Content/TextEdit" method="focus"]
+[connection signal="text_changed" from="Content/TextEdit" to="Content" method="check_text_state"]
+[connection signal="text_set" from="Content/TextEdit" to="Content" method="text_submitted"]

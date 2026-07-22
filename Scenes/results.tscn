@@ -1,0 +1,1202 @@
+[gd_scene format=3 uid="uid://c0f3mpfrm1cun"]
+
+[ext_resource type="Shader" uid="uid://d3tlvuic6lwbi" path="res://Shaders/back1.gdshader" id="1_3cjc3"]
+[ext_resource type="Script" uid="uid://bjykigaw8e8b2" path="res://Scenes/RESULTHELL.gd" id="1_3iro3"]
+[ext_resource type="FontFile" uid="uid://cc7fehn6j1igg" path="res://Fonts/Jersey20-Regular.ttf" id="2_3iro3"]
+[ext_resource type="FontFile" uid="uid://c3atbtcd04xyd" path="res://Fonts/ARIALBD.TTF" id="4_txdwj"]
+
+[sub_resource type="Gradient" id="Gradient_fevyy"]
+colors = PackedColorArray(0.050708726, 0.4661066, 1, 1, 0.20639679, 0.5275266, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_txdwj"]
+gradient = SubResource("Gradient_fevyy")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_av73q"]
+shader = ExtResource("1_3cjc3")
+shader_parameter/tiling = Vector2(2, 1)
+shader_parameter/offset = Vector2(-0.05, -0.05)
+shader_parameter/moving = true
+shader_parameter/size = 33.18000152855
+shader_parameter/color1 = Color(0.16007765, 0.5116678, 1, 0)
+shader_parameter/color2 = Color(0.047602944, 0.4679879, 0.99996823, 1)
+shader_parameter/speed = 1.0
+shader_parameter/mover_en_y = true
+shader_parameter/sentido = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i07ch"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g4v7s"]
+font = ExtResource("2_3iro3")
+font_size = 43
+
+[sub_resource type="LabelSettings" id="LabelSettings_yf5fn"]
+font = ExtResource("2_3iro3")
+font_size = 44
+outline_size = 5
+outline_color = Color(0.15247649, 0.15247649, 0.1524764, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3cjc3"]
+font = ExtResource("2_3iro3")
+font_size = 35
+font_color = Color(0.71907645, 0.71907645, 0.71907645, 1)
+outline_size = 5
+outline_color = Color(0.15247649, 0.15247649, 0.1524764, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_av73q"]
+border_width_bottom = 9
+expand_margin_right = 4.0
+shadow_color = Color(0.17558163, 0.17558163, 0.17558163, 0.43800002)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fhw0o"]
+bg_color = Color(0.45064825, 0.4506483, 0.45064813, 1)
+border_width_bottom = 3
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jydw"]
+bg_color = Color(0.55029315, 0.5502932, 0.550293, 1)
+border_width_bottom = 3
+expand_margin_right = 4.0
+
+[sub_resource type="Animation" id="Animation_3cjc3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("INVESTOR:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("INVESTOR/ap1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("INVESTOR/INVESTOR:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("INVESTOR/v1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("INVESTOR/v2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("INVESTOR/PRICE:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BUYERS:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BUYERS/POP:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BUYERS/PRICE:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BUYERS/WILLING:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BUYERS/REP:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PURCHASE/Value:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PURCHASES:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("PURCHASE:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("PURCHASE:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PURCHASES/PRICE:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("PURCHASES/v3:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PURCHASES/v4:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("PURCHASES/BONUS:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("FINAL:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("FINAL/COSTS:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("FINAL/FINALSCORE:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("END:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("TOTAL:position:y")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("LINE:position:y")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [511.0]
+}
+
+[sub_resource type="Animation" id="Animation_3iro3"]
+resource_name = "results"
+length = 53.766666
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("INVESTOR:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 14),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("INVESTOR/ap1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.03333333, 5.0666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("INVESTOR/INVESTOR:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335, 3.0666666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("INVESTOR/v1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.03333333, 6.133333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("INVESTOR/v2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10.033334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("INVESTOR/PRICE:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.033333335, 9.033334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BUYERS:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.033333335, 16, 29),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BUYERS/POP:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.033333335, 18.033333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BUYERS/PRICE:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.06666667, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BUYERS/WILLING:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.033333335, 21.033333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BUYERS/REP:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 23.933332),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PURCHASE/Value:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 25.066668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PURCHASES:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.033333335, 31.066668, 43),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("PURCHASE:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.06666667, 16.033333, 42.966667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("PURCHASE:position:y")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(28.966667, 30.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -247.395]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PURCHASES/PRICE:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 33.033333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("PURCHASES/v3:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 33.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PURCHASES/v4:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.033333335, 36.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("PURCHASES/BONUS:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0.033333335, 39),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("FINAL:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0.06666667, 45),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("FINAL/COSTS:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0.06666667, 47.066666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("FINAL/FINALSCORE:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0.06666667, 49),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("END:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 51.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("TOTAL:position:y")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(43.033333, 44.933334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -337.105]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("LINE:position:y")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(43, 44.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [511.0, 292.655]
+}
+tracks/25/type = "method"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath(".")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(3.0333333, 6.1, 10.066667, 18.033333, 21.066668, 25.1, 34, 37, 38.966667, 47.1, 49),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}, {
+"args": [],
+"method": &"anim_step"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_txdwj"]
+_data = {
+&"RESET": SubResource("Animation_3cjc3"),
+&"results": SubResource("Animation_3iro3")
+}
+
+[node name="Results" type="Node2D" unique_id=1535707859]
+script = ExtResource("1_3iro3")
+
+[node name="GeneralBackground" type="Control" parent="." unique_id=1005768691]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -14.0
+offset_top = -11.0
+offset_right = 26.0
+offset_bottom = 29.0
+
+[node name="BACK" type="TextureRect" parent="GeneralBackground" unique_id=1309160290]
+layout_mode = 0
+offset_left = 11.06672
+offset_top = 922.2527
+offset_right = 932.8454
+offset_bottom = 2207.453
+rotation = -1.5707964
+texture = SubResource("GradientTexture1D_txdwj")
+expand_mode = 1
+
+[node name="FRONT" type="Panel" parent="GeneralBackground" unique_id=811804810]
+material = SubResource("ShaderMaterial_av73q")
+layout_mode = 0
+offset_right = 1306.0
+offset_bottom = 739.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i07ch")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=859519878]
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 1295.0
+offset_bottom = 73.0
+color = Color(0.42754805, 0.42754805, 0.42754805, 0.767)
+
+[node name="Label" type="Label" parent="." unique_id=700972984]
+offset_left = 22.0
+offset_top = 18.0
+offset_right = 1302.0
+offset_bottom = 62.0
+text = "GAME RESULTS"
+label_settings = SubResource("LabelSettings_g4v7s")
+
+[node name="LINE" type="ColorRect" parent="." unique_id=392263299]
+offset_left = 245.0
+offset_top = 511.0
+offset_right = 1018.0
+offset_bottom = 513.0
+color = Color(0.64739496, 0.647395, 0.6473949, 1)
+
+[node name="TOTAL" type="Control" parent="." unique_id=1761972627]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="TOTAL" unique_id=790186160]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 522.0
+offset_right = 453.0
+offset_bottom = 567.0
+text = "EARNINGS:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="EARN" type="Label" parent="TOTAL" unique_id=1632788122]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 522.0
+offset_right = 956.0
+offset_bottom = 567.0
+text = "0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="INVESTOR" type="Control" parent="." unique_id=1187470654]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="INVESTOR" unique_id=1378302857]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 179.0
+offset_right = 471.0
+offset_bottom = 224.0
+text = "INVESTORS:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="INVESTOR" type="Label" parent="INVESTOR" unique_id=1135018951]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 179.0
+offset_right = 956.0
+offset_bottom = 224.0
+text = "0"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="Label6" type="Label" parent="INVESTOR" unique_id=712064489]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 323.0
+offset_right = 516.0
+offset_bottom = 416.0
+text = "INVESTOR PURCHASE:"
+label_settings = SubResource("LabelSettings_yf5fn")
+autowrap_mode = 3
+
+[node name="ap1" type="Label" parent="INVESTOR" unique_id=1730226955]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 244.0
+offset_right = 956.0
+offset_bottom = 289.0
+text = "x 100$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="v1" type="Label" parent="INVESTOR" unique_id=703632984]
+visible = false
+layout_mode = 0
+offset_left = 648.0
+offset_top = 431.0
+offset_right = 956.0
+offset_bottom = 476.0
+text = "0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="PRICE" type="Label" parent="INVESTOR" unique_id=1925496823]
+visible = false
+layout_mode = 0
+offset_left = 478.0
+offset_top = 244.0
+offset_right = 646.0
+offset_bottom = 289.0
+text = "x 0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="Label10" type="Label" parent="INVESTOR" unique_id=1243767640]
+layout_mode = 0
+offset_left = 646.0
+offset_top = 323.0
+offset_right = 877.0
+offset_bottom = 416.0
+text = "INVESTOR MONEY:"
+label_settings = SubResource("LabelSettings_yf5fn")
+autowrap_mode = 3
+
+[node name="v2" type="Label" parent="INVESTOR" unique_id=197593171]
+visible = false
+layout_mode = 0
+offset_left = 333.0
+offset_top = 431.0
+offset_right = 641.0
+offset_bottom = 476.0
+text = "0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="PURCHASE" type="Control" parent="." unique_id=1704361569]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.000015
+
+[node name="Label5" type="Label" parent="PURCHASE" unique_id=1378280641]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 434.0
+offset_right = 586.0
+offset_bottom = 479.0
+text = "BUYERS:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="Value" type="Label" parent="PURCHASE" unique_id=1748778167]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 434.0
+offset_right = 956.0
+offset_bottom = 479.0
+text = "0"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="BUYERS" type="Control" parent="." unique_id=638663722]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="BUYERS" unique_id=847854259]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 179.0
+offset_right = 471.0
+offset_bottom = 224.0
+text = "POPULARITY:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="POP" type="Label" parent="BUYERS" unique_id=1145164403]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 179.0
+offset_right = 956.0
+offset_bottom = 224.0
+text = "0"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="BUYERS" unique_id=988426722]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 241.0
+offset_right = 486.0
+offset_bottom = 286.0
+text = "GAME PRICE:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="PRICE" type="Label" parent="BUYERS" unique_id=752102180]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 241.0
+offset_right = 956.0
+offset_bottom = 286.0
+text = "0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="INVESTOR4" type="Label" parent="BUYERS/PRICE" unique_id=985192910]
+layout_mode = 0
+offset_left = 42.0
+offset_right = 199.0
+offset_bottom = 45.0
+text = "%"
+label_settings = SubResource("LabelSettings_3cjc3")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Label3" type="Label" parent="BUYERS" unique_id=1426615470]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 301.0
+offset_right = 486.0
+offset_bottom = 346.0
+text = "WILLING TO PAY:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="WILLING" type="Label" parent="BUYERS" unique_id=1583209201]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 301.0
+offset_right = 956.0
+offset_bottom = 346.0
+text = "0"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="BUYERS" unique_id=1759051341]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 378.0
+offset_right = 486.0
+offset_bottom = 423.0
+text = "GAME REPUTATION:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="REP" type="Label" parent="BUYERS" unique_id=966444963]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 378.0
+offset_right = 956.0
+offset_bottom = 423.0
+text = "X 0.0"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="PURCHASES" type="Control" parent="." unique_id=45902879]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PRICE" type="Label" parent="PURCHASES" unique_id=752872689]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 241.0
+offset_right = 956.0
+offset_bottom = 286.0
+text = "X 0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="PURCHASES" unique_id=1148729553]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 301.0
+offset_right = 486.0
+offset_bottom = 346.0
+text = "INCOME:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="v3" type="Label" parent="PURCHASES" unique_id=1892605732]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 301.0
+offset_right = 956.0
+offset_bottom = 346.0
+text = "0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="PURCHASES" unique_id=2012318726]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 378.0
+offset_right = 486.0
+offset_bottom = 423.0
+text = "MICROTRANSACTIONS:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="v4" type="Label" parent="PURCHASES" unique_id=921915419]
+visible = false
+modulate = Color(0.63648045, 0.63648045, 0.63648045, 1)
+layout_mode = 0
+offset_left = 657.0
+offset_top = 378.0
+offset_right = 956.0
+offset_bottom = 423.0
+text = "(NOT OPTED)"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="Label5" type="Label" parent="PURCHASES" unique_id=935190456]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 434.0
+offset_right = 586.0
+offset_bottom = 479.0
+text = "CONTENT BONUS:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="BONUS" type="Label" parent="PURCHASES" unique_id=1438121178]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 434.0
+offset_right = 956.0
+offset_bottom = 479.0
+text = "0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="FINAL" type="Control" parent="." unique_id=403352220]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label2" type="Label" parent="FINAL" unique_id=2143626477]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 241.0
+offset_right = 486.0
+offset_bottom = 286.0
+text = "PRODUCTION COSTS:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="COSTS" type="Label" parent="FINAL" unique_id=1856710570]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 241.0
+offset_right = 956.0
+offset_bottom = 286.0
+text = "0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="INVESTOR4" type="Label" parent="FINAL/COSTS" unique_id=1355283135]
+layout_mode = 0
+offset_left = -293.0
+offset_right = -136.0
+offset_bottom = 45.0
+text = "-"
+label_settings = SubResource("LabelSettings_3cjc3")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Label3" type="Label" parent="FINAL" unique_id=1573785323]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 301.0
+offset_right = 486.0
+offset_bottom = 346.0
+text = "FINAL SCORE:"
+label_settings = SubResource("LabelSettings_yf5fn")
+
+[node name="FINALSCORE" type="Label" parent="FINAL" unique_id=2128790031]
+visible = false
+layout_mode = 0
+offset_left = 788.0
+offset_top = 301.0
+offset_right = 956.0
+offset_bottom = 346.0
+text = "0$"
+label_settings = SubResource("LabelSettings_yf5fn")
+horizontal_alignment = 2
+
+[node name="END" type="Control" parent="." unique_id=1913909844]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="END" unique_id=1956908834]
+modulate = Color(0.40331623, 0.9999996, 0.44202006, 1)
+layout_mode = 0
+offset_left = 505.0
+offset_top = 367.0
+offset_right = 771.0
+offset_bottom = 422.0
+theme_override_colors/font_color = Color(1.1386906, 1.1386906, 1.1386906, 1)
+theme_override_fonts/font = ExtResource("4_txdwj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_av73q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fhw0o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jydw")
+text = "PLAY AGAIN"
+alignment = 2
+
+[node name="Button2" type="Button" parent="END" unique_id=2070968015]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 434.0
+offset_right = 771.0
+offset_bottom = 489.0
+theme_override_colors/font_color = Color(1.1386906, 1.1386906, 1.1386906, 1)
+theme_override_fonts/font = ExtResource("4_txdwj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_av73q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fhw0o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jydw")
+text = "MAIN MENU"
+alignment = 2
+
+[node name="Button3" type="Button" parent="END" unique_id=1311403996]
+modulate = Color(1, 0.5372549, 0.5372549, 1)
+layout_mode = 0
+offset_left = 634.0
+offset_top = 499.0
+offset_right = 771.0
+offset_bottom = 554.0
+theme_override_colors/font_color = Color(1.1386906, 1.1386906, 1.1386906, 1)
+theme_override_fonts/font = ExtResource("4_txdwj")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_av73q")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fhw0o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jydw")
+text = "EXIT"
+alignment = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1988642798]
+libraries/ = SubResource("AnimationLibrary_txdwj")
+
+[connection signal="pressed" from="END/Button" to="." method="play_again"]
+[connection signal="pressed" from="END/Button3" to="." method="quit"]

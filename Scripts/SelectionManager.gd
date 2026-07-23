@@ -26,6 +26,7 @@ func new_select():
 	add_child(node)
 	info.ON_SELECTION = true
 	info.SelectionArray.remove_at(select)
+	info.stop_runtime()
 
 func selection(selection:Selection):
 	if info.ON_SELECTION:
@@ -38,6 +39,7 @@ func selection(selection:Selection):
 	node.CurrentSelection = selection
 	add_child(node)
 	info.ON_SELECTION = true
+	info.stop_runtime()
 
 func line_completed(no:int):
 	if info == null:

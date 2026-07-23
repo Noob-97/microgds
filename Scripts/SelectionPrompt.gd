@@ -59,3 +59,4 @@ func apply_changes(opt:Option, node:Control):
 	tween.tween_property(node, "modulate", Color.TRANSPARENT, 0.25)
 	tween.tween_callback(node.queue_free)
 	tween.tween_callback(queue_free)
+	info.resume_runtime()

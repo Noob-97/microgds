@@ -39,7 +39,7 @@ var SuccessfulLines:int = 0:
 	set(value):
 		SuccessfulLines = value
 		update_objective()
-var SimualtedTime = 360000
+var SimualtedTime: int = 0
 var past_deadline = false
 
 signal LineCompleted(no:int)
@@ -55,6 +55,7 @@ var earn_step = 30
 var line_goal = 30
 var game_ended = false
 var microtransactions = false
+var timer_tween
 
 # References
 @onready var stats_ui = %STATS
@@ -77,9 +78,21 @@ var microtransactions = false
 var logobj = load("res://Scenes/logitem.tscn")
 
 func _ready() -> void:
+	Game.TUTORIAL = false
+	SimualtedTime = Game.duration * 10 * 3600
+	timer_tween = get_tree().create_tween()
+	timer_tween.tween_property(self, "SimualtedTime", 0, Game.duration * 60)
 	update_rep_ui()
 	prog_ui.max_value = line_goal
 	update_objective()
+
+func stop_runtime():
+	timer_tween.pause()
+	moneytimer.paused = true
+
+func resume_runtime():
+	timer_tween.play()
+	moneytimer.paused = false
 
 func format_seconds(total_seconds: float) -> String:
 	# Convertimos a entero para descartar decimales
@@ -96,7 +109,8 @@ func format_seconds(total_seconds: float) -> String:
 
 func _process(delta: float) -> void:
 	if not game_ended:
-		SimualtedTime -= time_step
+		if SimualtedTime <= 0:
+			SimualtedTime -= time_step
 		deadline_ui.text = format_seconds(SimualtedTime)
 	if SimualtedTime <= 0:
 		if SuccessfulLines >= line_goal:
@@ -166,8 +180,16 @@ func LOG_MONEY_ENTRY(VALUE:int, SUBJECT:String):
 	logcontainer.CHECK(node)
 	
 	MONEY += VALUE
-	money_ui.text = str(MONEY) + "$"
-
+	if MONEY > 0:
+		money_ui.text = "-" + str(MONEY) + "$"
+	else:
+		money_ui.text = str(MONEY) + "$"
+		
+	if MONEY < 0:
+		money_ui.modulate = Color.GREEN
+	else:
+		money_ui.modulate = Color.WHITE
+		
 func update_rep_ui():
 	var final_pos = lerp(40, 240, REP)
 	var tween = create_tween()

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c0f3mpfrm1cun"]
 
 [ext_resource type="Shader" uid="uid://d3tlvuic6lwbi" path="res://Shaders/back1.gdshader" id="1_3cjc3"]
-[ext_resource type="Script" uid="uid://bjykigaw8e8b2" path="res://Scenes/RESULTHELL.gd" id="1_3iro3"]
+[ext_resource type="Script" uid="uid://bjykigaw8e8b2" path="res://Scripts/RESULTHELL.gd" id="1_3iro3"]
 [ext_resource type="FontFile" uid="uid://cc7fehn6j1igg" path="res://Fonts/Jersey20-Regular.ttf" id="2_3iro3"]
 [ext_resource type="FontFile" uid="uid://uawka30nke5s" path="res://Fonts/Roboto-Bold.ttf" id="4_txdwj"]
 

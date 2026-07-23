@@ -2,6 +2,7 @@ extends VBoxContainer
 
 var info
 var sprite
+var is_tutorial:bool = false
 
 @onready var sample = $LineToWrite
 @onready var response = $TextEdit
@@ -20,6 +21,14 @@ func config() -> void:
 	
 	if index != info.CurrentLine:
 		response.editable = false
+
+func tutorial():
+	is_tutorial = true
+	get_node("../Index").text = str(index)
+	sprite = get_node("/root/Main/MIDDLE/Worker")
+	sample.text = 'print("Being a SuperCool Games developer is so fun!")'
+	substring_text()
+	
 
 func substring_text():
 	var current_text = sample.text
@@ -50,8 +59,9 @@ func substring_text():
 	subdivisions.sort()
 
 func check_text_state():
-	if info.ON_SELECTION:
-		return
+	if not is_tutorial:
+		if info.ON_SELECTION:
+			return
 	
 	# SPRITE ANIMATION
 	if sprite.frame == 80:
@@ -99,20 +109,38 @@ func check_text_state():
 	
 	if response.text != expected:
 		response.modulate = Color.INDIAN_RED
-		info.LOG_MONEY_ENTRY(50, "FOUND CODE NOT WORKING")
+		if not is_tutorial:
+			info.LOG_MONEY_ENTRY(50, "FOUND CODE NOT WORKING")
 	else:
 		response.modulate = Color.WHITE
 	
 func _input(event: InputEvent) -> void:
-	if Input.is_action_pressed("submit") and info.CurrentLine == index:
-		response.editable = false
-		submit()
-		
-		# SPRITE ANIMATION
-		if sprite.frame == 80:
-			sprite.frame = 0
-		else:
-			sprite.frame += 1
+	if not is_tutorial:
+		if Input.is_action_pressed("submit") and info.CurrentLine == index:
+			response.editable = false
+			submit()
+			
+			# SPRITE ANIMATION
+			if sprite.frame == 80:
+				sprite.frame = 0
+			else:
+				sprite.frame += 1
+	else:
+		if Input.is_action_pressed("submit") and response.text == 'print("Being a SuperCool Games developer is so fun!")':
+			response.editable = false
+			sample.modulate = Color.GREEN
+			var tween = get_tree().create_tween()
+			tween.tween_property(sample, "modulate", Color.WHITE, 0.5)
+			get_node("/root/Main/TUTORIAL").next_dialogue()
+			# SPRITE ANIMATION
+			if sprite.frame == 80:
+				sprite.frame = 0
+			else:
+				sprite.frame += 1
+			
+			await get_tree().create_timer(1).timeout
+			get_node("../..").new_line()
+			get_node("..").queue_free()
 
 func submit():
 	var color

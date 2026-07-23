@@ -391,6 +391,13 @@ offset_top = -11.0
 offset_right = 26.0
 offset_bottom = 29.0
 
+[node name="ColorRect" type="ColorRect" parent="GeneralBackground" unique_id=1854619037]
+visible = false
+layout_mode = 0
+offset_right = 1304.0
+offset_bottom = 742.0
+color = Color(0.20784314, 0.5294118, 1, 1)
+
 [node name="BACK" type="TextureRect" parent="GeneralBackground" unique_id=1689666778]
 layout_mode = 0
 offset_left = 11.06672
@@ -445,7 +452,7 @@ position = Vector2(1115.9999, 313)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 autoplay = "default"
-frame_progress = 0.783051
+frame_progress = 0.075022504
 
 [node name="MainButt" type="Control" parent="." unique_id=1758386044]
 layout_mode = 3

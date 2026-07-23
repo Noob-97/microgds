@@ -52,7 +52,7 @@ var sum_earn = false
 var countup_step = 10
 var time_step = 10
 var earn_step = 30
-var line_goal = 30
+var line_goal = 0
 var game_ended = false
 var microtransactions = false
 var timer_tween
@@ -82,6 +82,7 @@ func _ready() -> void:
 	SimualtedTime = Game.duration * 10 * 3600
 	timer_tween = get_tree().create_tween()
 	timer_tween.tween_property(self, "SimualtedTime", 0, Game.duration * 60)
+	line_goal = roundi((Game.duration * 10) * 0.4)
 	update_rep_ui()
 	prog_ui.max_value = line_goal
 	update_objective()

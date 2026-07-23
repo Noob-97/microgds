@@ -28,6 +28,11 @@ window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="ignore"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/Nitropc/Downloads/skgjam2/recordings/video.avi"
+movie_writer/fps=10
+
 [input]
 
 submit={

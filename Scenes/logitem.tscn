@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xx33h8m0q7pj"]
 
-[ext_resource type="FontFile" uid="uid://bdp6nx07qbvxl" path="res://Fonts/ARIAL.TTF" id="1_chegx"]
+[ext_resource type="FontFile" uid="uid://ddh1a7twt0q10" path="res://Fonts/Roboto-Regular.ttf" id="1_chegx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
 

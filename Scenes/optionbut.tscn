@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://xty0j1ks082k"]
 
-[ext_resource type="FontFile" uid="uid://bdp6nx07qbvxl" path="res://Fonts/ARIAL.TTF" id="1_ajk1f"]
+[ext_resource type="FontFile" uid="uid://ddh1a7twt0q10" path="res://Fonts/Roboto-Regular.ttf" id="1_ajk1f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qc5h"]
 content_margin_left = 4.0

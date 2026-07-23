@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d107be8r0c0wa" path="res://Scripts/SelectionPrompt.gd" id="1_flndd"]
 [ext_resource type="Script" uid="uid://201x3g0clbqp" path="res://Scripts/AdjustSizeContainer.gd" id="2_flndd"]
-[ext_resource type="FontFile" uid="uid://c3atbtcd04xyd" path="res://Fonts/ARIALBD.TTF" id="3_ak4c1"]
-[ext_resource type="FontFile" uid="uid://ftsmr74txiio" path="res://Fonts/ARIALI.TTF" id="4_l4viu"]
+[ext_resource type="FontFile" uid="uid://uawka30nke5s" path="res://Fonts/Roboto-Bold.ttf" id="3_ak4c1"]
+[ext_resource type="FontFile" uid="uid://cpmnqjp2d75wu" path="res://Fonts/Roboto_SemiCondensed-Italic.ttf" id="4_l4viu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak4c1"]
 content_margin_left = 0.0

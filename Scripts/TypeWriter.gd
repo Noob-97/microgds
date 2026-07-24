@@ -32,7 +32,6 @@ func new_line():
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.is_pressed():
 		if not event.as_text() == "CapsLock" and not event.as_text() == "Shift":
-			print(event.as_text())
 			var node = keysfx.instantiate()
 			get_node("/root/Main").add_child(node)
 			node.pitch_scale = randf_range(0.8, 1.2)

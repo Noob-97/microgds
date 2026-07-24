@@ -27,11 +27,29 @@ func _ready() -> void:
 
 func option_exec(opt:Option, node:Control):
 	flyingstats.get_node("MONEY").text = str(opt.MONEY * -1) + "$"
-	if opt.MONEY * -1 > 0:
+	if opt.MONEY * -1 >= 0:
 		flyingstats.get_node("MONEY").text = "+" + flyingstats.get_node("MONEY").text
+		flyingstats.get_node("MONEY").modulate = Color.WHITE
+	elif opt.MONEY < 0:
+		flyingstats.get_node("MONEY").modulate = Color.RED
 	flyingstats.get_node("REP").text = str(opt.REP) + " REP."
-	if opt.REP > 0:
+	if opt.REP >= 0:
 		flyingstats.get_node("REP").text = "+" + flyingstats.get_node("REP").text
+		flyingstats.get_node("REP").modulate = Color.WHITE
+	elif opt.REP < 0:
+		flyingstats.get_node("REP").modulate = Color.RED
+	flyingstats.get_node("POP").text = str(opt.POPULARITY) + " POP."
+	if opt.POPULARITY >= 0:
+		flyingstats.get_node("POP").text = "+" + flyingstats.get_node("POP").text
+		flyingstats.get_node("POP").modulate = Color.WHITE
+	elif opt.POPULARITY < 0:
+		flyingstats.get_node("POP").modulate = Color.RED
+	flyingstats.get_node("INVEST").text = str(opt.INVESTOR) + " INVEST."
+	if opt.INVESTOR >= 0:
+		flyingstats.get_node("INVEST").text = "+" + flyingstats.get_node("INVEST").text
+		flyingstats.get_node("INVEST").modulate = Color.WHITE
+	elif opt.INVESTOR < 0:
+		flyingstats.get_node("INVEST").modulate = Color.RED
 	
 	node.disabled = true
 	node.reparent(get_node(".."))
@@ -50,7 +68,7 @@ func apply_changes(opt:Option, node:Control):
 	tween3.tween_property(back.material, "shader_parameter/opacity", 1, 0.5)
 	back.material.set_shader_parameter("offset", Vector2(0.05, 0.05))
 	info.ON_SELECTION = false
-	flyingstats.get_node("AnimationPlayer").play("flytext")
+	flyingstats.get_node("AnimationPlayer").play("fade")
 	info.LOG_MONEY_ENTRY(opt.MONEY, opt.LogText)
 	info.REP += opt.REP
 	info.POPULARITY += opt.POPULARITY

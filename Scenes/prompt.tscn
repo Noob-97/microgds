@@ -67,24 +67,3 @@ layout_mode = 2
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1230608412]
 stream = ExtResource("5_l4viu")
 volume_db = -5.0
-
-[node name="Panel" type="Panel" parent="." unique_id=874071495]
-visible = false
-layout_mode = 0
-offset_left = 1.0
-offset_top = -305.0
-offset_right = 563.0
-offset_bottom = -9.0
-
-[node name="Situation" type="Label" parent="Panel" unique_id=1857778506]
-layout_mode = 0
-offset_left = 27.0
-offset_top = 19.0
-offset_right = 538.0
-offset_bottom = 49.0
-theme_override_fonts/font = ExtResource("3_ak4c1")
-theme_override_font_sizes/font_size = 20
-text = "MONEY:"
-horizontal_alignment = 1
-vertical_alignment = 2
-autowrap_mode = 3

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://da5xkwei58y5"
+path="res://.godot/imported/Nowhere Land.mp3-2d983c7c362a58faa6e6f7b8fa0051b8.mp3str"
+
+[deps]
+
+source_file="res://Music/Nowhere Land.mp3"
+dest_files=["res://.godot/imported/Nowhere Land.mp3-2d983c7c362a58faa6e6f7b8fa0051b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

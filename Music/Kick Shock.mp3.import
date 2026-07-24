@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8e0nomyhce3k"
+path="res://.godot/imported/Kick Shock.mp3-23048b72bea45fc3df549519ada027c5.mp3str"
+
+[deps]
+
+source_file="res://Music/Kick Shock.mp3"
+dest_files=["res://.godot/imported/Kick Shock.mp3-23048b72bea45fc3df549519ada027c5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

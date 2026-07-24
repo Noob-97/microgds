@@ -12,6 +12,7 @@ var CurrentSelection:Selection
 @onready var timer = get_node("../Timer")
 var butt = load("res://Scenes/optionbut.tscn")
 var tweetnode = load("res://Scenes/tweet.tscn")
+@onready var sfx: AudioStreamPlayer = $SFX
 
 func _ready() -> void:
 	var tween = get_tree().create_tween()
@@ -72,3 +73,5 @@ func tweet(msg:String):
 	twitter.move_child(node, 0)
 	node.get_node("msg").text = msg
 	node.get_node("username").text = "[b][color=dark_gray]"+ info.UsernameArray[random] +"[/color][/b]"
+	sfx.play()
+	

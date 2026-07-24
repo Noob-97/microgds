@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bjykigaw8e8b2" path="res://Scripts/RESULTHELL.gd" id="1_3iro3"]
 [ext_resource type="FontFile" uid="uid://cc7fehn6j1igg" path="res://Fonts/Jersey20-Regular.ttf" id="2_3iro3"]
 [ext_resource type="FontFile" uid="uid://uawka30nke5s" path="res://Fonts/Roboto-Bold.ttf" id="4_txdwj"]
+[ext_resource type="AudioStream" uid="uid://da5xkwei58y5" path="res://Music/Nowhere Land.mp3" id="5_av73q"]
+[ext_resource type="Script" uid="uid://miy4mvwsq74v" path="res://Scripts/button.gd" id="5_i07ch"]
 
 [sub_resource type="Gradient" id="Gradient_fevyy"]
 colors = PackedColorArray(0.050708726, 0.4661066, 1, 1, 0.20639679, 0.5275266, 1, 1)
@@ -1171,6 +1173,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fhw0o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jydw")
 text = "PLAY AGAIN"
 alignment = 2
+script = ExtResource("5_i07ch")
 
 [node name="Button2" type="Button" parent="END" unique_id=2070968015]
 layout_mode = 0
@@ -1186,6 +1189,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fhw0o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jydw")
 text = "MAIN MENU"
 alignment = 2
+script = ExtResource("5_i07ch")
 
 [node name="Button3" type="Button" parent="END" unique_id=1311403996]
 modulate = Color(1, 0.5372549, 0.5372549, 1)
@@ -1202,9 +1206,15 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fhw0o")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jydw")
 text = "EXIT"
 alignment = 2
+script = ExtResource("5_i07ch")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1988642798]
 libraries/ = SubResource("AnimationLibrary_txdwj")
+
+[node name="MUSIC" type="AudioStreamPlayer" parent="." unique_id=701538167]
+stream = ExtResource("5_av73q")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="END/Button" to="." method="play_again"]
 [connection signal="pressed" from="END/Button2" to="." method="mainmenu"]

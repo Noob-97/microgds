@@ -87,7 +87,9 @@
 [ext_resource type="Texture2D" uid="uid://boae1fu2x67nv" path="res://Sprites/WorkerAnim/workeranim0081.png" id="84_h4idw"]
 [ext_resource type="FontFile" uid="uid://uawka30nke5s" path="res://Fonts/Roboto-Bold.ttf" id="85_id3p6"]
 [ext_resource type="FontFile" uid="uid://cqh44jdny7mme" path="res://Fonts/JetBrainsMono-Regular.ttf" id="87_8p3n8"]
+[ext_resource type="Script" uid="uid://miy4mvwsq74v" path="res://Scripts/button.gd" id="87_x8te7"]
 [ext_resource type="Script" uid="uid://cgxcfnnh4cxj3" path="res://Scripts/versiontext.gd" id="88_8p3n8"]
+[ext_resource type="AudioStream" uid="uid://dv6eiha0wrucj" path="res://Music/Local Forecast.mp3" id="89_jir0r"]
 
 [sub_resource type="Gradient" id="Gradient_t014q"]
 colors = PackedColorArray(0.050708726, 0.4661066, 1, 1, 0.20639679, 0.5275266, 1, 1)
@@ -436,6 +438,7 @@ position = Vector2(352, 205)
 texture = ExtResource("2_n45e2")
 
 [node name="EarlyversionText" type="Sprite2D" parent="Title" unique_id=767603549]
+visible = false
 position = Vector2(206, 290)
 texture = ExtResource("3_opfnp")
 
@@ -475,6 +478,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
 text = "ONLINE LEADERBOARD"
 alignment = 0
+script = ExtResource("87_x8te7")
 
 [node name="Button" type="Button" parent="MainButt" unique_id=783385597]
 modulate = Color(0.9999998, 0.86867136, 0.62298954, 1)
@@ -491,6 +495,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
 text = "PLAY GAME"
 alignment = 0
+script = ExtResource("87_x8te7")
 
 [node name="Button2" type="Button" parent="MainButt" unique_id=587912375]
 modulate = Color(1, 0.5391695, 0.53572494, 1)
@@ -507,6 +512,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
 text = "EXIT"
 alignment = 0
+script = ExtResource("87_x8te7")
 
 [node name="GameButt" type="Control" parent="." unique_id=1940035980]
 visible = false
@@ -529,6 +535,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
 text = "TUTORIAL"
 alignment = 0
+script = ExtResource("87_x8te7")
 
 [node name="Button2" type="Button" parent="GameButt" unique_id=748268199]
 modulate = Color(0.7121002, 0.92893386, 0.99999994, 1)
@@ -545,6 +552,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
 text = "SHORT GAME (4min)"
 alignment = 0
+script = ExtResource("87_x8te7")
 
 [node name="Button3" type="Button" parent="GameButt" unique_id=1104511440]
 modulate = Color(0.764471, 0.9999998, 0.803574, 1)
@@ -561,6 +569,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
 text = "STANDARD GAME (6min)"
 alignment = 0
+script = ExtResource("87_x8te7")
 
 [node name="Button4" type="Button" parent="GameButt" unique_id=266342118]
 modulate = Color(0.92149705, 0.7370461, 1, 1)
@@ -577,6 +586,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
 text = "LONG GAME (8min)"
 alignment = 0
+script = ExtResource("87_x8te7")
 
 [node name="Label" type="Label" parent="GameButt" unique_id=73029408]
 layout_mode = 0
@@ -592,6 +602,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="VERSIONTEXT" type="Label" parent="." unique_id=1509319904]
+visible = false
 modulate = Color(0, 0, 0, 0.20600002)
 offset_top = 12.0
 offset_right = 1277.0
@@ -599,6 +610,11 @@ offset_bottom = 31.0
 theme_override_fonts/font = ExtResource("85_id3p6")
 horizontal_alignment = 1
 script = ExtResource("88_8p3n8")
+
+[node name="MUSIC" type="AudioStreamPlayer" parent="." unique_id=482921333]
+stream = ExtResource("89_jir0r")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="MainButt/Button" to="." method="play"]
 [connection signal="pressed" from="MainButt/Button2" to="." method="exit"]

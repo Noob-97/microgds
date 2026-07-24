@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ds6umopj3ndc"]
+
+[ext_resource type="AudioStream" uid="uid://cu1bo15ota7gi" path="res://SFX/key.mp3" id="1_48qhn"]
+
+[node name="KEYBOARDSFX" type="AudioStreamPlayer" unique_id=598930741]
+stream = ExtResource("1_48qhn")
+volume_db = -5.0
+autoplay = true

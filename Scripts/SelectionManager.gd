@@ -6,6 +6,7 @@ extends Control
 @onready var type = %Typewriter
 @onready var timer = $Timer
 var prompt = load("res://Scenes/prompt.tscn")
+@onready var sfx: AudioStreamPlayer = $SFX
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,6 +28,7 @@ func new_select():
 	info.ON_SELECTION = true
 	info.SelectionArray.remove_at(select)
 	info.stop_runtime()
+	sfx.play()
 
 func selection(selection:Selection):
 	if info.ON_SELECTION:
@@ -40,6 +42,7 @@ func selection(selection:Selection):
 	add_child(node)
 	info.ON_SELECTION = true
 	info.stop_runtime()
+	sfx.play()
 
 func line_completed(no:int):
 	if info == null:

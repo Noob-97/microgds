@@ -89,6 +89,9 @@ layout_mode = 2
 theme_override_constants/separation = 7
 theme_override_styles/separator = SubResource("StyleBoxLine_6bp64")
 
+[node name="SFX" type="AudioStreamPlayer" parent="Content" unique_id=1168976499]
+volume_db = -10.0
+
 [connection signal="focus_entered" from="Content/TextEdit" to="Content/TextEdit" method="focus"]
 [connection signal="text_changed" from="Content/TextEdit" to="Content" method="check_text_state"]
 [connection signal="text_set" from="Content/TextEdit" to="Content" method="text_submitted"]

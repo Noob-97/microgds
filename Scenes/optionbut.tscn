@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://xty0j1ks082k"]
 
 [ext_resource type="FontFile" uid="uid://ddh1a7twt0q10" path="res://Fonts/Roboto-Regular.ttf" id="1_ajk1f"]
+[ext_resource type="Script" uid="uid://miy4mvwsq74v" path="res://Scripts/button.gd" id="2_4qc5h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qc5h"]
 content_margin_left = 4.0
@@ -33,3 +34,4 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_fanqb")
 theme_override_styles/hover = SubResource("StyleBoxFlat_yembf")
 text = "This is a Selection Option."
 autowrap_mode = 3
+script = ExtResource("2_4qc5h")

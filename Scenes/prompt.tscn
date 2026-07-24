@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://201x3g0clbqp" path="res://Scripts/AdjustSizeContainer.gd" id="2_flndd"]
 [ext_resource type="FontFile" uid="uid://uawka30nke5s" path="res://Fonts/Roboto-Bold.ttf" id="3_ak4c1"]
 [ext_resource type="FontFile" uid="uid://cpmnqjp2d75wu" path="res://Fonts/Roboto_SemiCondensed-Italic.ttf" id="4_l4viu"]
+[ext_resource type="AudioStream" uid="uid://cbqkgilge0y2f" path="res://SFX/twitter.mp3" id="5_l4viu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak4c1"]
 content_margin_left = 0.0
@@ -62,3 +63,7 @@ vertical_alignment = 2
 
 [node name="OptionContainer" type="VBoxContainer" parent="Back/Content" unique_id=247831347]
 layout_mode = 2
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1230608412]
+stream = ExtResource("5_l4viu")
+volume_db = -5.0

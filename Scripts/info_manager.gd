@@ -75,6 +75,8 @@ var timer_tween
 @onready var back = get_node("/root/Main/MIDDLE/Back")
 @onready var type = get_node("/root/Main/Typewriter")
 @onready var endanim = get_node("/root/Main/EndingAnim")
+@onready var moneylog_SFX: AudioStreamPlayer = $MONEYLOG
+@onready var positivemoney_SFX: AudioStreamPlayer = $POSITIVEMONEY
 
 @onready var moneytimer = $Moneytimer
 @onready var logcontainer = stats_ui.get_node("LogContainer")
@@ -190,6 +192,7 @@ func _process(delta: float) -> void:
 				endanim.play("end")
 				configtracker()
 				Tracker.calculate_result()
+				get_node("../FINISH").play()
 		else:
 			past_deadline = true
 			deadline_ui.modulate = Color.RED
@@ -241,6 +244,11 @@ func LOG_MONEY_ENTRY(VALUE:int, SUBJECT:String):
 	node.get_child(0).scale = Vector2(1, 0)
 	tween.tween_property(node.get_child(0), "scale", Vector2.ONE, 0.5)
 	logcontainer.CHECK(node)
+	
+	if VALUE < 0:
+		positivemoney_SFX.play()
+	elif VALUE > 0:
+		moneylog_SFX.play()
 	
 	MONEY += VALUE
 	if MONEY > 0:

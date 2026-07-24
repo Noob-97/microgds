@@ -6,6 +6,8 @@ var is_tutorial:bool = false
 
 @onready var sample = $LineToWrite
 @onready var response = $TextEdit
+var good = load("res://SFX/good.mp3")
+var bad = load("res://SFX/bad.mp3")
 var index
 
 var random
@@ -150,10 +152,14 @@ func submit():
 	if response.text != expected:
 		info.LOG_MONEY_ENTRY(expected.length() * 200, "BUG FIXING TROUBLE")
 		color = Color.INDIAN_RED
+		get_node("SFX").stream = bad
+		get_node("SFX").play()
 	else:
 		info.LOG_MONEY_ENTRY(expected.length(), "LINE COMPLETE PAY")
 		color = Color.GREEN
 		info.SuccessfulLines += 1
+		get_node("SFX").stream = good
+		get_node("SFX").play()
 	
 	sample.text = sample.text.replace("[color=#3dcaff]", "")
 	sample.text = sample.text.replace("[/color]", "")

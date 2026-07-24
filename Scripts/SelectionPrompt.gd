@@ -91,5 +91,5 @@ func tweet(msg:String):
 	twitter.move_child(node, 0)
 	node.get_node("msg").text = msg
 	node.get_node("username").text = "[b][color=dark_gray]"+ info.UsernameArray[random] +"[/color][/b]"
-	sfx.play()
+	get_node("/root/Main/TWEET").play()
 	

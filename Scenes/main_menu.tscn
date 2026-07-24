@@ -535,7 +535,7 @@ modulate = Color(0.7121002, 0.92893386, 0.99999994, 1)
 layout_mode = 0
 offset_left = 310.0
 offset_top = 461.0
-offset_right = 640.0
+offset_right = 625.0
 offset_bottom = 522.0
 theme_override_colors/font_color = Color(1.139, 1.139, 1.139, 1)
 theme_override_fonts/font = ExtResource("85_id3p6")
@@ -543,7 +543,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_d3854")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
-text = "SHORT GAME (5min)"
+text = "SHORT GAME (4min)"
 alignment = 0
 
 [node name="Button3" type="Button" parent="GameButt" unique_id=1104511440]
@@ -559,7 +559,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_d3854")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
-text = "STANDARD GAME (8min)"
+text = "STANDARD GAME (6min)"
 alignment = 0
 
 [node name="Button4" type="Button" parent="GameButt" unique_id=266342118]
@@ -567,7 +567,7 @@ modulate = Color(0.92149705, 0.7370461, 1, 1)
 layout_mode = 0
 offset_left = 310.0
 offset_top = 610.0
-offset_right = 631.0
+offset_right = 618.0
 offset_bottom = 671.0
 theme_override_colors/font_color = Color(1.139, 1.139, 1.139, 1)
 theme_override_fonts/font = ExtResource("85_id3p6")
@@ -575,7 +575,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_d3854")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
-text = "LONG GAME (12min)"
+text = "LONG GAME (8min)"
 alignment = 0
 
 [node name="Label" type="Label" parent="GameButt" unique_id=73029408]

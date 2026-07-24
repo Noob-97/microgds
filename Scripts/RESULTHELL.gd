@@ -28,7 +28,7 @@ func _ready() -> void:
 	price.text = "x " + str(Tracker.GAMEPRICE) + "$"
 	price2.text = str(Tracker.GAMEPRICE)
 	price3.text = "x " + str(Tracker.GAMEPRICE) + "$"
-	rep.text = str(Tracker.GAMEREPUTATION + 1)
+	rep.text = str(Tracker.GAMEREPUTATION)
 	dict = Tracker.calculate_result()
 	animation_player.play("results")
 
@@ -88,3 +88,6 @@ func play_again():
 
 func quit():
 	get_tree().quit()
+
+func mainmenu():
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

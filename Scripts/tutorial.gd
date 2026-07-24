@@ -14,7 +14,7 @@ func _input(event: InputEvent) -> void:
 
 func next_dialogue():
 	if current_dialogue == 9:
-		Game.duration = 5
+		Game.duration = 4
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 		return
 			

@@ -1,0 +1,404 @@
+[
+  {
+	"ID": "physical",
+	"Text": "Company and investors don't think a physical release is important.",
+	"Options": [
+	  {
+		"Text": "Yeah it is! Plus, we are going to support them!",
+		"LogText": "PHYSICAL PRODUCTION",
+		"MONEY": 30000,
+		"REP": 0.2,
+		"POPULARITY": 20000,
+		"INVESTOR": -70,
+		"Twitter": "SuperCool is now officialy supporting physical release unlike other big games companies. Big W.",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "There exist people that want them, we maintain neutral tho.",
+		"LogText": "PHYSICAL PRODUCTION",
+		"MONEY": 15000,
+		"REP": 0.1,
+		"POPULARITY": 7000,
+		"INVESTOR": -20,
+		"Twitter": "can't wait to have a new physical game next to my supercool collection :D",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "They are probably right, we need to save money.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "ai",
+	"Text": "Investors are willing to give a ton of money with inclusion of AI.",
+	"Options": [
+	  {
+		"Text": "Let's attract more investors with AI",
+		"LogText": "INVESTOR MONEY RECEIVE",
+		"MONEY": -10000,
+		"REP": -0.4,
+		"POPULARITY": -7000,
+		"INVESTOR": 150,
+		"Twitter": "sorry but i dont understand supercools new game... everything seems to focused on ai for some reason rather that the game itself? I will not be buying this.",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "We will have to use AI then.",
+		"LogText": "INVESTOR MONEY RECEIVE",
+		"MONEY": -10000,
+		"REP": -0.2,
+		"POPULARITY": -2000,
+		"INVESTOR": 150,
+		"Twitter": "I HATE AI!! AND I HATE THATS BEING USED ON MY NEXT FAV GAME!!!!! RAHHHHHHH!!1111!!!!11 >:CCCCCCCCCCCCCCCCCC CC C. *cries*",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "I don't think that's ideal for this game.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": -15,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "No! We are totally agaisnt that!",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.25,
+		"POPULARITY": 5000,
+		"INVESTOR": -80,
+		"Twitter": "You all might be excited about SuperCool not using AI for once, but what you don't get this was to get investor's back. A very brave move, but i'm worried about what they are gonna do without their support.",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "fangames",
+	"Text": "Popularised fangames and artwork are becoming a threat for our Intellectual Property.",
+	"Options": [
+	  {
+		"Text": "In order to not lose property we must take down these.",
+		"LogText": "LAWSUIT FEES",
+		"MONEY": 300,
+		"REP": -0.35,
+		"POPULARITY": -2000,
+		"INVESTOR": 0,
+		"Twitter": "Thank you SuperCool. Thank you for making me excited about one of your products and promoting it to fucking sue me. You clearly treat your community very well. Fuck everyone.",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "We must send warnings to the creators to prevent these.",
+		"LogText": "LETTER FEES",
+		"MONEY": 50,
+		"REP": -0.15,
+		"POPULARITY": -400,
+		"INVESTOR": 0,
+		"Twitter": "Uhh Guys WTF. I just received a warning from SuperCool cuz i was using their characters... Dude, This is the OPPOSITE OF COOL.",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "We'll leave it as is for now.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "Free publicity for us, let's encourage them!",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.15,
+		"POPULARITY": 3500,
+		"INVESTOR": 0,
+		"Twitter": "hell yea supercool new fangame coming soon 👀",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "microtransactions",
+	"Text": "Company suggests adding microtransactions as an additional way of revenue.",
+	"Options": [
+	  {
+		"Text": "It would be best to maximize our earnings.",
+		"LogText": "(after release-money decision)",
+		"MONEY": 0,
+		"REP": -0.2,
+		"POPULARITY": -2500,
+		"INVESTOR": 10,
+		"Twitter": "This game's microtransaction are so annoying. They literally pop up every few seconds, UGH.",
+		"SpecialFunctionality": "microtransactions"
+	  },
+	  {
+		"Text": "It will help cover the production costs.",
+		"LogText": "(after release-money decision)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": "microtransactions"
+	  },
+	  {
+		"Text": "Microtransaction aren't essential to this game.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "streamers",
+	"Text": "Marketing department is considering sponsoring streamers for playing the game.",
+	"Options": [
+	  {
+		"Text": "Contact much popular streamers as possible.",
+		"LogText": "STREAMER SPONSORSHIP",
+		"MONEY": 35000,
+		"REP": 0,
+		"POPULARITY": 75000,
+		"INVESTOR": 0,
+		"Twitter": "OMG MY FAV STREAMER JUST PLAYED THIS SUPER COOL GAME I NEED TO PLAY IT WHEN IT RELEASES [b]100%!!!!!",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "Only contact a few and small streamers.",
+		"LogText": "STREAMER SPONSORSHIP",
+		"MONEY": 10000,
+		"REP": 0.25,
+		"POPULARITY": 5000,
+		"INVESTOR": 0,
+		"Twitter": "TBH i've never received a sponsorship but this game really seems nice you guys should check it out ♥️",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "No thanks.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "anticheat",
+	"Text": "We should need an anti-cheat to prevent hacking cases in the game.",
+	"Options": [
+	  {
+		"Text": "Implement the most secure anti-cheat possible.",
+		"LogText": "ANTICHEAT LICENSE",
+		"MONEY": 900,
+		"REP": -0.2,
+		"POPULARITY": -7000,
+		"INVESTOR": 8,
+		"Twitter": "WTF is this game fucking warzone now???? [b]wdym change BIOS SETTINGS?!?![/b] this anticheat is TOO extreme.",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "Have a regular anticheat",
+		"LogText": "ANTICHEAT LICENSE",
+		"MONEY": 100,
+		"REP": 0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "The game will be fine without anti-cheat.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": -0.3,
+		"POPULARITY": -9000,
+		"INVESTOR": -30,
+		"Twitter": "Guys. Do not play SuperCool's new game. I just got hacked from it, all servers are infested with hackers. They won't care for applying security measures, this fucking sucks.",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "console-exclusive",
+	"Text": "This videogame company is giving us 30000$ if our game becomes exclusive to their console.",
+	"Options": [
+	  {
+		"Text": "Deal!! We need the money!!!",
+		"LogText": "CONSOLE EXCLUSIVITY DEAL",
+		"MONEY": -30000,
+		"REP": 0,
+		"POPULARITY": -10000,
+		"INVESTOR": 0,
+		"Twitter": "So sad I don't have a console to play Super Cool's new game :-(...",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "No thanks.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "data-collection",
+	"Text": "Analytics recommend collecting player's data as an alternative source of money.",
+	"Options": [
+	  {
+		"Text": "Collect and sell player's data to third parties.",
+		"LogText": "DATA STORAGE",
+		"MONEY": -3000,
+		"REP": -0.7,
+		"POPULARITY": -3000,
+		"INVESTOR": 0,
+		"Twitter": "This is [b]DISGUSTING[/b]. SuperCool is now SELLING YOUR DATA if you play their new game. I don't want to be part of such evil squeme.",
+		"SpecialFunctionality": "datacollect"
+	  },
+	  {
+		"Text": "Opt out of collecting data.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "stock-exchange",
+	"Text": "It's suggested to enter the stock-exchange for gaining much more investors.",
+	"Options": [
+	  {
+		"Text": "Enter the stock exchange.",
+		"LogText": "ENTRANCE FEE",
+		"MONEY": 10000,
+		"REP": -0.4,
+		"POPULARITY": 0,
+		"INVESTOR": 450,
+		"Twitter": "what have games turned into nowadays? game companies are all entering the stock exchange blinded by investors... this is why i prefer indies.",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "Do not enter.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "stats",
+	"Text": "The semester stadistics are lower than expected, threatening our investor leadership.",
+	"Options": [
+	  {
+		"Text": "'Adjust' (inflate) stadistics (aka. lie to get more investors).",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0,
+		"POPULARITY": 0,
+		"INVESTOR": 100,
+		"Twitter": "Investor here. SuperCool's semester stadistics seem suspiciously high, considering their past actions...",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "Release them as is.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": -75,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "Release little to no stadistics.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": -20,
+		"Twitter": "anyone knows why supercool are trying to hide their expected sales?",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "brand",
+	"Text": "A major snack brand wants to collaborate with our game in exchange of exposure.",
+	"Options": [
+	  {
+		"Text": "Let's do it!",
+		"LogText": "SPONSOR MONEY",
+		"MONEY": -10000,
+		"REP": -0.1,
+		"POPULARITY": 7500,
+		"INVESTOR": 30,
+		"Twitter": "what is the point of having a soda-branded skin on my game",
+		"SpecialFunctionality": ""
+	  },
+	  {
+		"Text": "Reject sponsorship.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  }
+	]
+  },
+  {
+	"ID": "ads",
+	"Text": "In-game ads are suggested to remedy costs.",
+	"Options": [
+	  {
+		"Text": "Let's do it!",
+		"LogText": "(after release-money decision)",
+		"MONEY": 0,
+		"REP": -0.7,
+		"POPULARITY": 7500,
+		"INVESTOR": 30,
+		"Twitter": "which fucking big-company game on PC has ads. im not playing this shit just for you pigs to get money out of me.",
+		"SpecialFunctionality": "ads"
+	  },
+	  {
+		"Text": "Actually that idea is not that good.",
+		"LogText": "(decision w/o money impact)",
+		"MONEY": 0,
+		"REP": 0.0,
+		"POPULARITY": 0,
+		"INVESTOR": 0,
+		"Twitter": "",
+		"SpecialFunctionality": ""
+	  }
+	]
+  }
+]

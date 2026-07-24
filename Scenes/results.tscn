@@ -42,6 +42,13 @@ font_color = Color(0.71907645, 0.71907645, 0.71907645, 1)
 outline_size = 5
 outline_color = Color(0.15247649, 0.15247649, 0.1524764, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_txdwj"]
+line_spacing = -8.96
+font = ExtResource("2_3iro3")
+font_size = 32
+outline_size = 5
+outline_color = Color(0.15247649, 0.15247649, 0.1524764, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_av73q"]
 border_width_bottom = 9
 expand_margin_right = 4.0
@@ -1046,11 +1053,12 @@ horizontal_alignment = 2
 [node name="Label4" type="Label" parent="PURCHASES" unique_id=2012318726]
 layout_mode = 0
 offset_left = 285.0
-offset_top = 378.0
-offset_right = 486.0
-offset_bottom = 423.0
-text = "MICROTRANSACTIONS:"
-label_settings = SubResource("LabelSettings_yf5fn")
+offset_top = 372.0
+offset_right = 580.0
+offset_bottom = 439.0
+text = "MICROTRANSACTIONS,
+DATA COLLECTION & ADS:"
+label_settings = SubResource("LabelSettings_txdwj")
 
 [node name="v4" type="Label" parent="PURCHASES" unique_id=921915419]
 visible = false
@@ -1199,4 +1207,5 @@ alignment = 2
 libraries/ = SubResource("AnimationLibrary_txdwj")
 
 [connection signal="pressed" from="END/Button" to="." method="play_again"]
+[connection signal="pressed" from="END/Button2" to="." method="mainmenu"]
 [connection signal="pressed" from="END/Button3" to="." method="quit"]

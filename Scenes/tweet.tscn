@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c43l6dvxjt17k"]
+
+[ext_resource type="Script" uid="uid://201x3g0clbqp" path="res://Scripts/AdjustSizeContainer.gd" id="1_m7rew"]
+[ext_resource type="Texture2D" uid="uid://dbl75tysdrqeb" path="res://Sprites/circle.png" id="2_ikaup"]
+[ext_resource type="Script" uid="uid://cm27g1brql3f5" path="res://Scripts/pfp.gd" id="3_2dfim"]
+[ext_resource type="FontFile" uid="uid://ddh1a7twt0q10" path="res://Fonts/Roboto-Regular.ttf" id="4_y010e"]
+[ext_resource type="FontFile" uid="uid://uawka30nke5s" path="res://Fonts/Roboto-Bold.ttf" id="5_y51vt"]
+
+[node name="Tweet" type="Control" unique_id=1056557689]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m7rew")
+
+[node name="pfp" type="TextureRect" parent="." unique_id=476529233]
+modulate = Color(0.6310349, 0.631035, 0.6310349, 1)
+layout_mode = 0
+offset_top = 6.0
+offset_right = 29.0
+offset_bottom = 35.0
+texture = ExtResource("2_ikaup")
+script = ExtResource("3_2dfim")
+
+[node name="username" type="RichTextLabel" parent="." unique_id=1250288242]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 10.0
+offset_right = 227.0
+offset_bottom = 31.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_y010e")
+theme_override_fonts/bold_font = ExtResource("5_y51vt")
+bbcode_enabled = true
+text = "[b][color=dark_gray]@username[/color][/b]"
+scroll_active = false
+
+[node name="msg" type="RichTextLabel" parent="." unique_id=582876472]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 32.0
+offset_right = 227.0
+offset_bottom = 53.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_y010e")
+theme_override_fonts/bold_font = ExtResource("5_y51vt")
+bbcode_enabled = true
+text = "SuperCool's new game sucks."
+fit_content = true
+scroll_active = false

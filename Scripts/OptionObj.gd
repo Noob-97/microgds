@@ -7,4 +7,5 @@ class_name Option
 @export var REP:float
 @export var POPULARITY:int
 @export var INVESTOR:int
+@export var Twitter:String
 @export var SpecialFunctionality:String

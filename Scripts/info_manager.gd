@@ -29,7 +29,8 @@ var PRICE:int = 0
 
 # Arrays
 @export var CodeArray:Array[String]
-@export var SelectionArray:Array[Selection]
+@export var UsernameArray:Array[String]
+var SelectionArray:Array[Selection]
 
 # Tracking Data
 var CurrentLine = 1
@@ -55,6 +56,8 @@ var earn_step = 30
 var line_goal = 0
 var game_ended = false
 var microtransactions = false
+var datacollect = false
+var ads = false
 var timer_tween
 
 # References
@@ -77,6 +80,65 @@ var timer_tween
 @onready var logcontainer = stats_ui.get_node("LogContainer")
 var logobj = load("res://Scenes/logitem.tscn")
 
+func _init():
+	SelectionArray = parse_json_to_selections(FileAccess.get_file_as_string("res://selections.json"))
+
+## Parsea una cadena de texto JSON o una estructura parseada y devuelve un Array[Selection]
+static func parse_json_to_selections(json_string_or_data) -> Array[Selection]:
+	var selections: Array[Selection] = []
+	var raw_data = json_string_or_data
+	
+	# Si se pasa un String, lo parseamos a JSON primero
+	if json_string_or_data is String:
+		var json = JSON.new()
+		var error = json.parse(json_string_or_data)
+		if error == OK:
+			raw_data = json.data
+		else:
+			push_error("Error al parsear el JSON: ", error)
+			return selections
+
+	# Aseguramos que los datos base sean un Array
+	if not raw_data is Array:
+		push_error("El JSON debe contener una lista/array en la raíz.")
+		return selections
+
+	# Iteramos sobre cada elemento para construir las instancias de Selection
+	for item in raw_data:
+		if not item is Dictionary:
+			continue
+			
+		var selection = Selection.new()
+		selection.ID = item.get("ID", "")
+		selection.Text = item.get("Text", "")
+		selection.Options = [] as Array[Option]
+		
+		# Parseamos las opciones dentro de la selección
+		var raw_options = item.get("Options", [])
+		if raw_options is Array:
+			for opt_data in raw_options:
+				if opt_data is Dictionary:
+					var option = _parse_option(opt_data)
+					selection.Options.append(option)
+					
+		selections.append(selection)
+
+	return selections
+
+
+## Función auxiliar para instanciar una Option desde un Diccionario
+static func _parse_option(data: Dictionary) -> Option:
+	var option = Option.new()
+	option.Text = data.get("Text", "")
+	option.LogText = data.get("LogText", "")
+	option.MONEY = int(data.get("MONEY", 0))
+	option.REP = float(data.get("REP", 0.0))
+	option.POPULARITY = int(data.get("POPULARITY", 0))
+	option.INVESTOR = int(data.get("INVESTOR", 0))
+	option.Twitter = data.get("Twitter", "")
+	option.SpecialFunctionality = data.get("SpecialFunctionality", "")
+	return option
+
 func _ready() -> void:
 	Game.TUTORIAL = false
 	SimualtedTime = Game.duration * 10 * 3600
@@ -84,8 +146,8 @@ func _ready() -> void:
 	timer_tween.tween_property(self, "SimualtedTime", 0, Game.duration * 60)
 	line_goal = roundi((Game.duration * 10) * 0.4)
 	update_rep_ui()
-	prog_ui.max_value = line_goal
 	update_objective()
+	print("Decisions:",SelectionArray.size())
 
 func stop_runtime():
 	timer_tween.pause()
@@ -174,7 +236,7 @@ func loop_moneytimer():
 func LOG_MONEY_ENTRY(VALUE:int, SUBJECT:String):
 	var node = logobj.instantiate()
 	logcontainer.add_child(node)
-	node.get_child(0).text = str(VALUE) + "$: " + SUBJECT
+	node.get_child(0).text = str(VALUE * -1) + "$: " + SUBJECT
 	var tween = get_tree().create_tween()
 	node.get_child(0).scale = Vector2(1, 0)
 	tween.tween_property(node.get_child(0), "scale", Vector2.ONE, 0.5)
@@ -184,10 +246,10 @@ func LOG_MONEY_ENTRY(VALUE:int, SUBJECT:String):
 	if MONEY > 0:
 		money_ui.text = "-" + str(MONEY) + "$"
 	else:
-		money_ui.text = str(MONEY) + "$"
+		money_ui.text = str(abs(MONEY)) + "$"
 		
 	if MONEY < 0:
-		money_ui.modulate = Color.GREEN
+		money_ui.modulate = Color.LIME
 	else:
 		money_ui.modulate = Color.WHITE
 		
@@ -198,7 +260,10 @@ func update_rep_ui():
 
 func update_objective():
 	objective_ui.text = str(SuccessfulLines) + "/" + str(line_goal)
-	prog_ui.value = SuccessfulLines
+	if SuccessfulLines >= line_goal:
+		prog_ui.material.set_shader_parameter("valor_progreso", 1)
+	else:
+		prog_ui.material.set_shader_parameter("valor_progreso", float(SuccessfulLines) / float(line_goal))
 	LineCompleted.emit(SuccessfulLines)
 
 func check_select(id:String, special:String):
@@ -208,6 +273,10 @@ func check_select(id:String, special:String):
 		earn_ui.text = "0$"
 	if special == "microtransactions":
 		microtransactions = true
+	if special == "datacollect":
+		datacollect = true
+	if special == "ads":
+		ads = true
 
 func configtracker():
 	Tracker.COSTS = MONEY
@@ -216,6 +285,8 @@ func configtracker():
 	Tracker.INVESTOR = INVESTOR
 	Tracker.LINEGOAL = line_goal
 	Tracker.MICROTRANSACTIONS = microtransactions
+	Tracker.DATACOLLECT = datacollect
+	Tracker.ADS = ads
 	Tracker.POPULARITY = POPULARITY
 	Tracker.SUCCESSFUL_LINES = SuccessfulLines
 
@@ -224,3 +295,6 @@ func end(String):
 
 func quit():
 	get_tree().quit()
+
+func mainmenu():
+	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")

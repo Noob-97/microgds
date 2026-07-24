@@ -14,13 +14,13 @@ func tutorial():
 	get_tree().change_scene_to_file("res://Scenes/tutorial.tscn")
 
 func short():
-	Game.duration = 5
+	Game.duration = 4
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func standard():
-	Game.duration = 8
+	Game.duration = 6
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func long():
-	Game.duration = 12
+	Game.duration = 8
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")

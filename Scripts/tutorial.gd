@@ -17,7 +17,8 @@ func next_dialogue():
 		Game.duration = 4
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 		return
-			
+	
+	get_node("../CLICK").play()
 	get_node("d" + str(current_dialogue)).visible = false
 	get_node("d" + str(current_dialogue) + "/AUDIO").stop()
 	current_dialogue += 1

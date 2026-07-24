@@ -373,7 +373,7 @@ border_width_bottom = 11
 expand_margin_left = 10.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_id3p6"]
-bg_color = Color(0.35656506, 0.35656488, 0.3565649, 1)
+bg_color = Color(0.35584977, 0.35584977, 0.35584977, 0.49)
 border_width_bottom = 11
 expand_margin_left = 10.0
 
@@ -476,6 +476,8 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_d3854")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_id3p6")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_id3p6")
+disabled = true
 text = "ONLINE LEADERBOARD"
 alignment = 0
 script = ExtResource("87_x8te7")
@@ -513,6 +515,18 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_0jm3b")
 text = "EXIT"
 alignment = 0
 script = ExtResource("87_x8te7")
+
+[node name="Label" type="Label" parent="MainButt" unique_id=1512642930]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 495.0
+offset_right = 789.0
+offset_bottom = 637.0
+theme_override_fonts/font = ExtResource("87_8p3n8")
+theme_override_font_sizes/font_size = 21
+text = "(On Newgrounds release.)"
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="GameButt" type="Control" parent="." unique_id=1940035980]
 visible = false
